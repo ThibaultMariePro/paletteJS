@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>🎨 PaletteJS🎨</title>
+</head>
+
+<body>
+    <h1>Welcome to 🎨paletteJS🎨</h1>
+    <div class="info">
+        <h3>Color shades</h3>
+        <p>
+            Adding black in varying levels to a color produces gradually darker
+            variants, <br />
+            or 'shades', of that particular color. <br />
+            Shades work well for link hover effects, or as footer and header
+            backgrounds.<br />
+        </p>
+        <h3>Color Tints</h3>
+        <p>
+            Color tints are made by adding white to a color, resulting in
+            increasingly lighter versions.<br />
+            Tints can also be used for CSS hover effects, and perform nicely as
+            modal backgrounds.
+        </p>
+        <h3>Color Tones</h3>
+        <p>
+            Tones are created by adding gray to a color, and produces an almost
+            endless variety of colors <br />
+            depending on what level of gray is used. <br />
+            Less common in web design, tones could be useful for typographic
+            elements like comments, <br />
+            quotes or highlights.
+        </p>
+    </div>
+    <hr />
+    <div class="lab">
+        <div class="colorDisplayer">
+            <fieldset>
+                <legend>HexColor</legend>
+                <label for="textColorInput">MAIN COLOR</label>
+                <input type="text" class="textColorInput" name="textColorInput" value="#" />
+            </fieldset>
+        </div>
+        <div class="paletteByLuminanceBoard">
+            <h3>Color Tints - paletteByLuminance</h3>
+            <div class="paletteByLuminance">
+                <div id="100"></div>
+                <div id="99"></div>
+                <div id="98"></div>
+                <div id="97"></div>
+                <div id="95"></div>
+                <div id="90"></div>
+                <div id="80"></div>
+                <div id="70"></div>
+                <div id="60"></div>
+                <div id="50"></div>
+                <div id="40"></div>
+                <div id="30"></div>
+                <div id="15"></div>
+                <div id="10"></div>
+                <div id="5"></div>
+                <div id="0"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.colorDisplayer {
+    width          : 160px;
+    height         : 160px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    margin         : 10px auto;
+    border         : 10px solid grey;
+    box-sizing     : border-box;
+    border-radius  : 12px;
+}
+
+.textColorInput {
+    width: 100px;
+}
+
+.paletteByLuminanceBoard {
+    margin : 2px;
+    padding: 2px;
+
+    .paletteByLuminance {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        div {
+            margin: 1px;
+            width          : 50px;
+            height         : 100px;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            border         : 1px solid black;
+            font-weight    : bold;
+            position: relative;
+            cursor: pointer;
+            h2{
+                position: absolute;
+                top: 75px;
+            }
+        }
+    }
+}
