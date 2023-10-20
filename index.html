@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./main.css" />
-
     <title>🎨 PaletteJS🎨</title>
 </head>
 
@@ -49,6 +48,10 @@
                 <label for="textColorInput">MAIN COLOR</label>
                 <input type="text" class="textColorInput" name="textColorInput" value="#" />
             </fieldset>
+            <div class="currentCode">
+                <h4 class="currentCodeRGB">RGB : </h4>
+                <h4 class="currentCodeHex">HEX : </h4>
+            </div>
         </div>
         <div class="paletteByLuminanceBoard">
             <h3>Color Tints - paletteByLuminance</h3>
@@ -73,7 +76,7 @@
         </div>
     </div>
     </div>
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>
