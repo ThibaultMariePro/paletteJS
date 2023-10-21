@@ -27,12 +27,15 @@ function displayHexCode(e){
   let currentRGBColor = filterRGBColor(e.originalTarget.style.backgroundColor)
   let currentRGBColorArray = splitComa(currentRGBColor)
   let currentCodeRGB = document.querySelector('.currentCodeRGB')
+  let currentCodeHSL = document.querySelector('.currentCodeHSL')
   let currentCodeHex = document.querySelector('.currentCodeHex')
   let currentR = currentRGBColorArray[0]
   let currentG = currentRGBColorArray[1]
   let currentB = currentRGBColorArray[2]
   let currentHexColor = rgbToHex(currentR, currentG, currentB)
+  let currentHSLColor = hexToHSL(currentHexColor).h+' '+hexToHSL(currentHexColor).s+'% '+hexToHSL(currentHexColor).l+'%'
   currentCodeRGB.innerHTML = 'RGB : <span style="color:red">'+currentR+'</span>,<span style="color:green">'+currentG+'</span>,<span style="color:blue">'+currentB+'</span><br>'
+  currentCodeHSL.innerHTML = 'HSL : '+currentHSLColor
   currentCodeHex.innerHTML = 'HEX : '+currentHexColor
 }
 
