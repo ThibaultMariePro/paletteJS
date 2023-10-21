@@ -1,4 +1,5 @@
 import { hexToHSL, copyhexCode, rgbToHex, filterRGBColor, splitComa, createGrid } from './modules/utils.js';
+import Palette from './modules/palette.js';
 
 let colorDisplayer = document.querySelector(".colorDisplayer");
 let textColorInput = document.querySelector(".textColorInput");
@@ -48,3 +49,8 @@ let paletteByLuminance2 = createGrid('paletteByLuminance', [0, 5, 10, 15, 20, 30
 
 
 createGrid('test de mon cul', [0, 1, 2, 3])
+
+let classTest = new Palette("test", [1,2,3])
+classTest.log()
+classTest.generateBoard('tdd')
+classTest.generateGrid()
