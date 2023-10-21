@@ -77,3 +77,21 @@ export function copyhexCode(e){
   let rgbArray = splitComa(filteredRGBColor)
   navigator.clipboard.writeText(rgbToHex(rgbArray[0],rgbArray[1],rgbArray[2]));
 }
+
+export function createGrid(name, arrayOfValue) {
+  let board = document.querySelector('.board');
+  let palette = document.createElement('div')
+  palette.setAttribute("class", "palette " + name)
+  palette.innerHTML = '<h2>'+name+'</h2>'
+  board.appendChild(palette)
+  let grid = document.createElement('div')
+  grid.setAttribute('class', 'grid')
+  palette.appendChild(grid)
+  arrayOfValue.forEach(element => {
+    let cell = document.createElement('div')
+    cell.setAttribute('id', element)
+    cell.setAttribute('class', 'cell')
+    cell.innerHTML = cell.id
+    grid.appendChild(cell)
+  });
+}

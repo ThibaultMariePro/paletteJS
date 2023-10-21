@@ -9,36 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./main.css" />
-    <title>🎨 PaletteJS🎨</title>
+    <title>🎨 PaletteJS 🎨</title>
 </head>
 
 <body>
-    <h1>Welcome to 🎨paletteJS🎨</h1>
+    <h1 class="title">Welcome to 🎨 paletteJS 🎨</h1>
     <div class="info">
-        <h3>Color shades</h3>
-        <p>
-            Adding black in varying levels to a color produces gradually darker
-            variants, <br />
-            or 'shades', of that particular color. <br />
-            Shades work well for link hover effects, or as footer and header
-            backgrounds.<br />
-        </p>
-        <h3>Color Tints</h3>
-        <p>
-            Color tints are made by adding white to a color, resulting in
-            increasingly lighter versions.<br />
-            Tints can also be used for CSS hover effects, and perform nicely as
-            modal backgrounds.
-        </p>
-        <h3>Color Tones</h3>
-        <p>
-            Tones are created by adding gray to a color, and produces an almost
-            endless variety of colors <br />
-            depending on what level of gray is used. <br />
-            Less common in web design, tones could be useful for typographic
-            elements like comments, <br />
-            quotes or highlights.
-        </p>
+        <details>
+            <summary>Color Shades</summary>
+            <p>
+                Adding black in varying levels to a color produces gradually darker
+                variants, <br />
+                or 'shades', of that particular color. <br />
+                Shades work well for link hover effects, or as footer and header
+                backgrounds.<br />
+            </p>
+        </details>
+        <details>
+            <summary>Color Tints</summary>
+            <p>
+                Color tints are made by adding white to a color, resulting in
+                increasingly lighter versions.<br />
+                Tints can also be used for CSS hover effects, and perform nicely as
+                modal backgrounds.
+            </p>
+        </details>
+        <details>
+            <summary>Color Tones</summary>
+            <p>
+                Tones are created by adding gray to a color, and produces an almost
+                endless variety of colors <br />
+                depending on what level of gray is used. <br />
+                Less common in web design, tones could be useful for typographic
+                elements like comments, <br />
+                quotes or highlights.
+            </p>
+        </details>
     </div>
     <hr />
     <div class="lab">
@@ -49,9 +55,9 @@
                 <input type="text" class="textColorInput" name="textColorInput" value="#" />
             </fieldset>
             <div class="currentCode">
-                <h4 class="currentCodeRGB">RGB : </h4>
-                <h4 class="currentCodeHSL">HSL : </h4>
-                <h4 class="currentCodeHex">HEX : </h4>
+                <h4 class="currentCodeRGB"><abbr title="Red, Green and Blue primary colors of light are added together in various ways to reproduce a broad array of colors.">RGB</abbr> : </h4>
+                <h4 class="currentCodeHSL"><abbr title="Hue, Saturation, Lightness are alternative representations of the RGB color model. This representation models the way different paints mix together to create color in the real world">HSL</abbr> : </h4>
+                <h4 class="currentCodeHex"><abbr title="Hexadecimal color codes are specified with notation using a leading number sign (#)">HEX</abbr> : </h4>
             </div>
         </div>
         <div class="paletteByLuminanceBoard">
@@ -78,23 +84,9 @@
         <br>
         <hr>
         <br>
-        <div class="grid">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+
+        <div class="board">
+            <h2>board</h2>
         </div>
     </div>
     </div>

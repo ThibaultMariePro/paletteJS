@@ -1,7 +1,19 @@
 class Palette{
-    constructor( name, params){
+    constructor( name, arrayWithVariation){
         this.name = name;
         this.params = params;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
