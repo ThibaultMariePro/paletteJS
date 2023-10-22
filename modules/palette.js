@@ -24,15 +24,44 @@ export default class Palette {
     }
 
     generatePalette() {
+        console.warn('generatePalette')
+        if(document.querySelector('#palette-'+this.name)!=null){
+            alert('ERROR : Cannot generate Palette, '+this.name+' name already taken.')
+            throw(new Error('palette already exists for god\'s sake'))
+        }
         let palette = document.createElement("div");
-        const attributes = {
+        let removeBtn = document.createElement("button");
+        const paletteAttributes = {
             class: "palette",
             id: "palette-" + this.name,
+            origin: this.name,
         };
-        palette.setAttribute("class", attributes.class);
-        palette.setAttribute("id", attributes.id);
+        const removeBtnAttributes = {
+            class: "removeBtn",
+            id: "removeBtn-" + this.name,
+            origin: this.name,
+        };
+
+        palette.setAttribute("class", paletteAttributes.class);
+        palette.setAttribute("id", paletteAttributes.id);
+        palette.innerHTML =
+            '<div class="paletteHeader"><h2 style="text-align:center;">'
+            + this.name + '</h2></div>'
         document.querySelector(".lab .palettes").appendChild(palette);
-        palette.innerHTML = '<h2 style="text-align:center;">' + this.name + "</h2>";
+
+        removeBtn.setAttribute("class", removeBtnAttributes.class);
+        removeBtn.setAttribute("id", removeBtnAttributes.id);
+        removeBtn.innerHTML = "X"
+        removeBtn.addEventListener('click', this.removePalette, false)
+        palette.firstChild.appendChild(removeBtn)
+    }
+
+    removePalette() {
+        let paletteName = this.id.split('removeBtn-')[1]
+        console.log(paletteName)
+        let palette = document.querySelector('#palette-' + paletteName)
+        console.log(palette)
+        palette.remove()
     }
 
     generateBoard() {
@@ -40,6 +69,7 @@ export default class Palette {
         const attributes = {
             class: "board",
             id: "board-" + this.name,
+            origin: this.name,
         };
         board.setAttribute("class", attributes.class);
         board.setAttribute("id", attributes.id);
@@ -77,7 +107,7 @@ export default class Palette {
         this.grid = grid;
     }
 
-    paintHSLGrid(color="#FF33F5") {
+    paintHSLGrid(color = "#FF33F5") {
         let gridToPaint = document.querySelector('#' + this.grid.id)
         console.log()
         gridToPaint.childNodes.forEach((item) => {

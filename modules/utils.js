@@ -66,6 +66,9 @@ export function rgbToHex(r, g, b){
 export function filterRGBColor(rgbString){
   return rgbString.replace(/[^0-9,]+/g, "")
 }
+export function filterAnythingButNumbers(string){
+  return string.replace(/[^0-9,]+/g, "")
+}
 
 export function splitComa(stringToSplit){
  return stringToSplit.split(",")
