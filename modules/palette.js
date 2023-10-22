@@ -9,7 +9,8 @@ import {
 } from "./utils.js";
 export default class Palette {
     constructor(name, arrayWithVariation, bgColor = "#F5F5F5") {
-        this.name = name.replace(" ", "-");
+        // this.name = name.replace(" ", "-");
+        this.name = name.replace(/[^a-zA-Z0-9]/g,'-');
         this.arrayWithVariation = arrayWithVariation;
         this.bgColor = bgColor;
         this.cellConf = {
