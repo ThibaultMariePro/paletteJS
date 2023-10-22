@@ -79,11 +79,11 @@ export function copyhexCode(e){
 }
 
 export function createGrid(name, arrayOfValue) {
-  let board = document.querySelector('.board');
+  // let board = document.querySelector('.board');
   let palette = document.createElement('div')
   palette.setAttribute("class", "palette " + name)
   palette.innerHTML = '<h2>'+name+'</h2>'
-  board.appendChild(palette)
+  // board.appendChild(palette)
   let grid = document.createElement('div')
   grid.setAttribute('class', 'grid')
   palette.appendChild(grid)
