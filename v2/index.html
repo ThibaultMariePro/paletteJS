@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/imports.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>🎨 PaletteJS</title>
+  </head>
+  <body>
+    <section class="configure">
+      <div class="info">
+        <h1>Palette config ⚙️</h1>
+        <p>Configure your palette</p>
+      </div>
+      <div class="main-color-input">
+        <label for="main-color-input">Main Color</label>
+        <input type="text" name="main-input-hexcode" />
+        <button id="add-color">Add color</button>
+      </div>
+      <div class="secondary-color-input">
+        <label for="secondary-color-input">Secondary Color</label>
+        <input type="text" name="secondary-input-hexcode" />
+        <button id="add-color">Add color</button>
+      </div>
+    </section>
+
+    <section class="render">
+      <div class="info">
+        <h1>Palette render 🎨</h1>
+        <p>Render your palette</p>
+      </div>
+      <div class="palette"></div>
+    </section>
+  </body>
+</html>
