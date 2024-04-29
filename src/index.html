@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet" />
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./styles/output.css" />
     <title>🎨 PaletteJS 🎨</title>
 </head>
 
 <body>
-    <h1 class="title">Welcome to 🎨 paletteJS 🎨</h1>
-    <span class="material-symbols-outlined"> check </span>
-    <div class="info border border-amber-400">
+    <div class="flex justify-center items-center">
+        <span class="material-symbols-outlined shadow-lg rounded-full p-2 m-2 bg-rose-400 hover:bg-teal-400 peer ">
+            palette
+        </span>
+        <h1 class="w-full bg-teal-400 shadow p-2 peer-hover:bg-rose-400">Welcome to paletteJS</h1>
+    </div>
+    <div class="info shadow p-4 w-1/2 m-auto rounded bg-neutral-50 border border-teal-400 divide-y divide-violet-200">
         <details>
-            <summary>Color Shades</summary>
-            <p>
+            <summary class="bg-orange-200 px-2 border hover:bg-orange-300 shadow rounded ">Color Shades</summary>
+            <p class="p-4 bg-gradient-to-br from-teal-50 via-orange-200 to-teal-100 text-justify rounded shadow">
                 Adding black in varying levels to a color produces gradually darker
-                variants, <br />
-                or 'shades', of that particular color. <br />
-                Shades work well for link hover effects, or as footer and header
-                backgrounds.<br />
+                variants, or 'shades', of that particular color. Shades work well for link hover effects, or as footer
+                and header backgrounds.
             </p>
         </details>
         <details>
-            <summary>Color Tints</summary>
-            <p>
+            <summary class="bg-rose-200 px-2 border hover:bg-rose-300 shadow rounded ">Color Tints
+            </summary>
+            <p class="p-4 bg-gradient-to-br from-teal-50 via-rose-200 to-teal-100 rounded shadow">
                 Color tints are made by adding white to a color, resulting in
-                increasingly lighter versions.<br />
-                Tints can also be used for CSS hover effects, and perform nicely as
-                modal backgrounds.
+                increasingly lighter versions. Tints can also be used for CSS hover effects, and perform nicely as modal
+                backgrounds.
             </p>
         </details>
         <details>
-            <summary>Color Tones</summary>
-            <p>
+            <summary class="bg-indigo-200 px-2 border hover:bg-indigo-300 shadow rounded ">Color Tones</summary>
+            <p class="p-4 bg-gradient-to-br from-teal-50 via-indigo-200 to-teal-100 rounded shadow">
                 Tones are created by adding gray to a color, and produces an almost
-                endless variety of colors <br />
-                depending on what level of gray is used. <br />
-                Less common in web design, tones could be useful for typographic
-                elements like comments, <br />
-                quotes or highlights.
+                endless variety of colors depending on what level of gray is used. Less common in web design, tones
+                could be useful for typographic elements like comments, quotes or highlights.
             </p>
         </details>
     </div>
-    <hr />
-    <div class="lab">
+    <div class="lab m-8 p-8">
         <div class="colorDisplayer">
+            <fieldset>
+                <legend>Palette Configuration</legend>
+                <label for="textColorInput">MAIN COLOR (hexcode)</label>
+                <input type="text" class="colorInput" id="textColorInput" name="textColorInput" value="#"
+                    placeholder="#fff" />
+                <input type="color" class="colorInput" id="colorPicker">
                 <fieldset>
-                    <legend>Palette Configuration</legend>
-                    <label for="textColorInput">MAIN COLOR (hexcode)</label>
-                    <input type="text" class="colorInput" id="textColorInput" name="textColorInput" value="#" placeholder="#fff" />
-                    <input type="color" class="colorInput" id="colorPicker">
-                    <fieldset>
-                        <label for="variations">Variations array, enter values separated by comas</label>
-                        <input type="text" class="colorInput" id="variations" placeholder="0,22,30,255">
-                    </fieldset>
-                    <select id="paletteType">
-                        <option value="shades">Color Shades</option>
-                        <option value="tints">Color Tints</option>
-                        <option value="tones">Color Tones</option>
-                    </select>
-                    <input type="text" class="colorInput" id="palette-name" placeholder="palette-name">
-                    <input type="submit" class="colorInput" id="submit-palette-params" value="Generate Palette">
+                    <label for="variations">Variations array, enter values separated by comas</label>
+                    <input type="text" class="colorInput" id="variations" placeholder="0,22,30,255">
                 </fieldset>
-                <div class="currentCode">
-                    <h4 class="currentCodeRGB"><abbr title="Red, Green and Blue primary colors of light are added together in various ways to reproduce a broad array of colors.">RGB</abbr> : </h4>
-                    <h4 class="currentCodeHSL"><abbr title="Hue, Saturation, Lightness are alternative representations of the RGB color model. This representation models the way different paints mix together to create color in the real world">HSL</abbr> : </h4>
-                    <h4 class="currentCodeHex"><abbr title="Hexadecimal color codes are specified with notation using a leading number sign (#)">HEX</abbr> : </h4>
-                </div>
+                <select id="paletteType">
+                    <option value="shades">Color Shades</option>
+                    <option value="tints">Color Tints</option>
+                    <option value="tones">Color Tones</option>
+                </select>
+                <input type="text" class="colorInput" id="palette-name" placeholder="palette-name">
+                <input type="submit" class="colorInput" id="submit-palette-params" value="Generate Palette">
+            </fieldset>
+            <div class="currentCode">
+                <h4 class="currentCodeRGB"><abbr
+                        title="Red, Green and Blue primary colors of light are added together in various ways to reproduce a broad array of colors.">RGB</abbr>
+                    : </h4>
+                <h4 class="currentCodeHSL"><abbr
+                        title="Hue, Saturation, Lightness are alternative representations of the RGB color model. This representation models the way different paints mix together to create color in the real world">HSL</abbr>
+                    : </h4>
+                <h4 class="currentCodeHex"><abbr
+                        title="Hexadecimal color codes are specified with notation using a leading number sign (#)">HEX</abbr>
+                    : </h4>
+            </div>
         </div>
         <br>
         <hr>
